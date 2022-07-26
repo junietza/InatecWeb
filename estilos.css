@@ -1,0 +1,168 @@
+*{
+    padding: 0;
+    margin: 0;
+}  
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    position: relative;
+    z-index: 1;
+}
+.navbar-menu{
+    background: black;
+    height: 50px;
+    width: 100%;
+
+    position: fixed;
+}
+.logo{
+    position: absolute;
+    color:white;
+    font-size: 30px;
+    top: 8px;
+    left: 5%;
+    font-weight: bold;
+}
+.navbar-menu ul{
+    float: right;
+    margin-right: 20px;
+    list-style: none;
+}
+.nav-options li{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+    text-align: center;
+    z-index: 1;
+}
+.nav-options li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    position: relative;
+}
+nav li:hover{
+    background-color: white;
+    transition: 5s;
+}
+nav li a:hover{
+    color: black;
+}
+/*a:focus, a:hover{
+    background: whitesmoke;
+}*/
+section{
+    width: 100%;
+}
+.banner{
+    height: 130vh;
+    position: relative;
+    background-color: orangered;
+}
+.banner-content img{
+    margin: 5px 0;
+    height: 100%;
+    width: 100%;
+}
+footer{
+    position: relative;
+}
+.footer{
+    height: 10vh;
+    background: #e07205;
+}
+.social{
+    width: 50%;
+    float: left;
+    margin-top: 21px;
+    text-align: center;
+}
+.social label a{
+    color:black;
+}
+.social label i{
+    font-size: 25px;
+    padding: 0 10px;
+}
+.social label i:hover{
+    color: white;
+}
+.copr{
+    width: 50%;
+    float: left;
+    margin-top: 21px;
+    text-align: left;
+    font-size: 20px;
+}
+.checkbtn{
+    font-size: 25px;
+    float: right;
+    color: aliceblue;
+    line-height: 50px;
+    margin-right: 25px;
+    cursor: pointer;
+
+    display: none;
+}
+#check{
+    display: none;
+}
+/* version escritorio*/
+@media(max-width: 1024px){
+    .logo{
+        padding-left: 40px;
+    }
+    .nav-options li a{
+        font-size: 16px;
+        padding: 7px 10px;
+    }
+    .banner{
+        height: 89vh;
+    }
+    .banner-content im{
+        margin-top: 50px;
+    }
+}
+/* version tablet*/
+@media(max-width:768px){
+    .checkbtn{
+        display: block;
+    }
+    .nav-options{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #e07205;
+        top: 50px;
+        left: -100%;
+        text-align: center;
+
+        transition: .5s;
+    }
+    .nav-options li{
+        display: block;
+        border-bottom: 1px solid #f4f0f0;
+        z-index: 1;
+    }
+    .nav-options li a{
+        font-size: 18px;
+    }
+    nav li:hover{
+        color: black;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .banner{
+        height: 55vh;
+        margin-bottom: 35vh;
+    }
+
+    .banner-content img{
+        height:55vh;
+        
+    }
+
+}
